@@ -1,35 +1,95 @@
 from reportlab.platypus import (
     SimpleDocTemplate,
     Paragraph,
-    Spacer
+    Spacer,
+    HRFlowable
 )
-from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.styles import (
+    getSampleStyleSheet,
+    ParagraphStyle
+)
+from reportlab.lib.enums import TA_CENTER
+from reportlab.lib.colors import HexColor
 from reportlab.lib.units import inch
-import os
 from datetime import datetime
+import os
+
+
+def _add_section(story, title, text, styles):
+    """Render a report section with automatic formatting."""
+
+    story.append(Paragraph(title, styles["SectionHeading"]))
+    story.append(Spacer(1, 0.12 * inch))
+
+    for line in text.split("\n"):
+
+        line = line.strip()
+
+        if not line:
+            continue
+
+        # Markdown heading
+        if line.startswith("### "):
+            story.append(
+                Paragraph(
+                    line[4:],
+                    styles["SubHeading"]
+                )
+            )
+
+        # Bullet list
+        elif line.startswith("- "):
+            story.append(
+                Paragraph(
+                    "• " + line[2:],
+                    styles["Body"]
+                )
+            )
+
+        # Numbered list
+        elif (
+            len(line) > 2
+            and line[0].isdigit()
+            and line[1] == "."
+        ):
+            story.append(
+                Paragraph(
+                    line,
+                    styles["Body"]
+                )
+            )
+
+        else:
+            story.append(
+                Paragraph(
+                    line,
+                    styles["Body"]
+                )
+            )
+
+    story.append(Spacer(1, 0.22 * inch))
+    story.append(
+        HRFlowable(
+            width="100%",
+            thickness=1,
+            color=HexColor("#CCCCCC")
+        )
+    )
+    story.append(Spacer(1, 0.18 * inch))
 
 
 def generate_mission_report(
-    mission_name: str,
-    vision_summary: str,
-    telemetry_summary: str,
-    research_summary: str
-) -> str:
+    mission_name,
+    vision_summary,
+    telemetry_summary,
+    research_summary,
+):
     """
-    Generate a PDF mission report.
-
-    Args:
-        mission_name: Name of the mission.
-        vision_summary: Output from Vision Agent.
-        telemetry_summary: Output from Telemetry Agent.
-        research_summary: Output from Research Agent.
-
-    Returns:
-        Path to generated PDF report.
+    Generate a professional AquaGuardian mission report.
     """
 
     try:
-        # Create reports directory if it doesn't exist
+
         os.makedirs("reports", exist_ok=True)
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -40,114 +100,185 @@ def generate_mission_report(
 
         doc = SimpleDocTemplate(
             filename,
-            rightMargin=72,
-            leftMargin=72,
-            topMargin=72,
-            bottomMargin=72
+            rightMargin=50,
+            leftMargin=50,
+            topMargin=50,
+            bottomMargin=50
         )
 
         styles = getSampleStyleSheet()
+
+        styles.add(
+            ParagraphStyle(
+                name="TitleStyle",
+                parent=styles["Title"],
+                alignment=TA_CENTER,
+                fontSize=24,
+                spaceAfter=18,
+                textColor=HexColor("#0B4F6C")
+            )
+        )
+
+        styles.add(
+            ParagraphStyle(
+                name="SectionHeading",
+                parent=styles["Heading2"],
+                textColor=HexColor("#1565C0"),
+                fontSize=16,
+                spaceBefore=12,
+                spaceAfter=8
+            )
+        )
+
+        styles.add(
+            ParagraphStyle(
+                name="SubHeading",
+                parent=styles["Heading3"],
+                textColor=HexColor("#37474F"),
+                fontSize=13
+            )
+        )
+
+        styles.add(
+            ParagraphStyle(
+                name="Body",
+                parent=styles["BodyText"],
+                leading=18,
+                spaceAfter=6,
+                fontSize=10.5
+            )
+        )
+
         story = []
 
-        # Title
-        title = Paragraph(
-            f"AquaGuardian Mission Report: {mission_name}",
-            styles['Title']
-        )
-        story.append(title)
-        story.append(Spacer(1, 0.2 * inch))
+        # -------------------------------------------------
+        # COVER
+        # -------------------------------------------------
 
-        # Timestamp
-        generated_time = Paragraph(
-            f"Generated on: {datetime.now()}",
-            styles['Normal']
-        )
-
-        story.append(generated_time)
-        story.append(Spacer(1, 0.3 * inch))
-
-        # Vision Section
         story.append(
             Paragraph(
-                "Vision Analysis",
-                styles['Heading2']
+                "AquaGuardian",
+                styles["TitleStyle"]
             )
         )
 
         story.append(
             Paragraph(
-                vision_summary.replace("\n", "<br/>"),
-                styles['BodyText']
-            )
-        )
-
-        story.append(Spacer(1, 0.2 * inch))
-
-        # Telemetry Section
-        story.append(
-            Paragraph(
-                "Telemetry Analysis",
-                styles['Heading2']
+                "<b>Autonomous Underwater Mission Report</b>",
+                styles["Heading1"]
             )
         )
 
         story.append(
-            Paragraph(
-                telemetry_summary.replace("\n", "<br/>"),
-                styles['BodyText']
-            )
+            Spacer(1, 0.3 * inch)
         )
 
-        story.append(Spacer(1, 0.2 * inch))
-
-        # Research Section
         story.append(
             Paragraph(
-                "Scientific Insights",
-                styles['Heading2']
+                f"<b>Mission:</b> {mission_name}",
+                styles["Body"]
             )
         )
 
         story.append(
             Paragraph(
-                research_summary.replace("\n", "<br/>"),
-                styles['BodyText']
+                f"<b>Generated:</b> {datetime.now().strftime('%d %B %Y %H:%M:%S')}",
+                styles["Body"]
             )
         )
 
-        story.append(Spacer(1, 0.3 * inch))
+        story.append(
+            Spacer(1, 0.25 * inch)
+        )
 
-        # Recommendations Section
+        story.append(
+            HRFlowable(
+                width="100%",
+                thickness=2,
+                color=HexColor("#1565C0")
+            )
+        )
+
+        story.append(
+            Spacer(1, 0.25 * inch)
+        )
+
+        # -------------------------------------------------
+        # CONTENT
+        # -------------------------------------------------
+
+        _add_section(
+            story,
+            "Vision Analysis",
+            vision_summary,
+            styles
+        )
+
+        _add_section(
+            story,
+            "Telemetry Analysis",
+            telemetry_summary,
+            styles
+        )
+
+        _add_section(
+            story,
+            "Scientific Insights",
+            research_summary,
+            styles
+        )
+
         story.append(
             Paragraph(
                 "Recommendations",
-                styles['Heading2']
+                styles["SectionHeading"]
             )
         )
 
-        recommendations = """
-        • Review mission anomalies identified in telemetry.<br/>
-        • Investigate detected debris or hazards.<br/>
-        • Validate species detections with marine experts.<br/>
-        • Consider follow-up surveys for ecological monitoring.
-        """
+        recommendations = [
+            "Review mission anomalies before deployment.",
+            "Verify hazard detections with a human operator.",
+            "Schedule a follow-up ecological survey if required.",
+            "Archive mission data for future trend analysis."
+        ]
+
+        for rec in recommendations:
+            story.append(
+                Paragraph(
+                    "• " + rec,
+                    styles["Body"]
+                )
+            )
+
+        story.append(
+            Spacer(1, 0.35 * inch)
+        )
+
+        story.append(
+            HRFlowable(
+                width="100%",
+                thickness=1,
+                color=HexColor("#888888")
+            )
+        )
+
+        story.append(
+            Spacer(1, 0.12 * inch)
+        )
 
         story.append(
             Paragraph(
-                recommendations,
-                styles['BodyText']
+                "<font color='#777777'>"
+                "Generated automatically by AquaGuardian "
+                "using a Google ADK multi-agent workflow."
+                "</font>",
+                styles["Body"]
             )
         )
 
-        # Build PDF
         doc.build(story)
 
-        return (
-            f"Mission report successfully generated: "
-            f"{filename}"
-        )
+        return f"Mission report successfully generated: {filename}"
 
     except Exception as e:
-        return (
-            f"Error generating report: {str(e)}"
-        )
+        return f"Error generating report: {e}"
