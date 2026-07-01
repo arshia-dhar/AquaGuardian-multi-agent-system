@@ -1,0 +1,38 @@
+{
+    "branching coral": {
+        "importance": "Provides shelter for juvenile fish and invertebrates.",
+        "health_indicator": "Highly sensitive to bleaching and physical damage."
+    },
+    "staghorn coral": {
+        "importance": "One of the fastest-growing reef-building corals.",
+        "health_indicator": "Indicator of reef recovery."
+    },
+    "elkhorn coral": {
+        "importance": "Protects coastlines by reducing wave energy.",
+        "health_indicator": "Critically important Caribbean reef species."
+    },
+    "brain coral": {
+        "importance": "Long-lived coral providing stable reef structure.",
+        "health_indicator": "Generally resilient to storms."
+    },
+    "table coral": {
+        "importance": "Provides shade and habitat for reef organisms.",
+        "health_indicator": "Susceptible to storm damage."
+    },
+    "plate coral": {
+        "importance": "Efficient at capturing sunlight in deeper waters.",
+        "health_indicator": "Common on reef slopes."
+    },
+    "soft coral": {
+        "importance": "Adds biodiversity and habitat complexity.",
+        "health_indicator": "More flexible than hard corals."
+    },
+    "mushroom coral": {
+        "importance": "Usually free-living and found on sandy reef bottoms.",
+        "health_indicator": "Adapted to disturbed environments."
+    },
+    "bleached coral": {
+        "importance": "Represents coral under severe environmental stress.",
+        "health_indicator": "Immediate monitoring recommended."
+    }
+}

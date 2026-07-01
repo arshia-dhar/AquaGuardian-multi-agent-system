@@ -1,0 +1,33 @@
+{
+    "healthy_reef": [
+        "Continue periodic reef monitoring.",
+        "Maintain long-term biodiversity records.",
+        "Compare future surveys against baseline observations.",
+        "Archive imagery for habitat change detection."
+    ],
+    "degraded_reef": [
+        "Schedule a detailed ecological inspection.",
+        "Increase survey frequency.",
+        "Notify marine conservation authorities.",
+        "Monitor coral recovery over time."
+    ],
+    "marine_debris": [
+        "Document debris location using GPS.",
+        "Recommend targeted cleanup operations.",
+        "Assess potential wildlife entanglement risks."
+    ],
+    "bleaching": [
+        "Monitor water temperature trends.",
+        "Perform repeat surveys during subsequent seasons.",
+        "Assess bleaching severity using image comparisons."
+    ],
+    "protected_species": [
+        "Avoid disturbing observed wildlife.",
+        "Maintain safe navigation distances.",
+        "Record sightings for conservation databases."
+    ],
+    "apex_predators": [
+        "Presence generally indicates a balanced ecosystem.",
+        "Continue passive observation without disturbance."
+    ]
+}

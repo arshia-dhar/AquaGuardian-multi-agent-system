@@ -1,0 +1,54 @@
+{
+    "marine debris": {
+        "severity": "high",
+        "recommendation": "Document debris location and recommend cleanup."
+    },
+    "plastic": {
+        "severity": "high",
+        "recommendation": "Plastic waste threatens marine life through ingestion and entanglement."
+    },
+    "ghost net": {
+        "severity": "critical",
+        "recommendation": "Fishing nets can entangle turtles, sharks and marine mammals."
+    },
+    "oil spill": {
+        "severity": "critical",
+        "recommendation": "Immediately notify environmental authorities."
+    },
+    "coral bleaching": {
+        "severity": "high",
+        "recommendation": "Recommend follow-up ecological assessment."
+    },
+    "sediment plume": {
+        "severity": "medium",
+        "recommendation": "Reduced visibility may affect coral health."
+    },
+    "strong current": {
+        "severity": "medium",
+        "recommendation": "Reduce AUV speed and monitor navigation."
+    },
+    "low visibility": {
+        "severity": "medium",
+        "recommendation": "Increase obstacle avoidance sensitivity."
+    },
+    "dense coral": {
+        "severity": "medium",
+        "recommendation": "Navigate carefully to avoid reef damage."
+    },
+    "rock outcrop": {
+        "severity": "medium",
+        "recommendation": "Potential collision hazard."
+    },
+    "shipwreck": {
+        "severity": "low",
+        "recommendation": "Interesting archaeological feature; maintain safe clearance."
+    },
+    "underwater ruins": {
+        "severity": "low",
+        "recommendation": "Possible archaeological site. Recommend human review."
+    },
+    "bubble plume": {
+        "severity": "low",
+        "recommendation": "May interfere with sonar measurements."
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "butterflyfish": {
+        "indicator": "reef health",
+        "importance": "high",
+        "description": "Butterflyfish rely heavily on live coral and are widely regarded as indicators of healthy reef ecosystems."
+    },
+    "surgeonfish": {
+        "indicator": "algae control",
+        "importance": "high",
+        "description": "Surgeonfish graze on algae, preventing excessive algal growth and maintaining reef balance."
+    },
+    "parrotfish": {
+        "indicator": "reef maintenance",
+        "importance": "high",
+        "description": "Parrotfish help maintain coral reefs by grazing algae and producing coral sand."
+    },
+    "angelfish": {
+        "indicator": "reef biodiversity",
+        "importance": "medium",
+        "description": "Angelfish are commonly found in biodiverse coral reef habitats."
+    },
+    "clownfish": {
+        "indicator": "healthy anemones",
+        "importance": "medium",
+        "description": "Clownfish live symbiotically with sea anemones, indicating stable reef environments."
+    },
+    "lionfish": {
+        "indicator": "predator",
+        "importance": "medium",
+        "description": "Lionfish are venomous predators. In some regions they are invasive and threaten native reef biodiversity."
+    },
+    "moray eel": {
+        "indicator": "reef predator",
+        "importance": "medium",
+        "description": "Moray eels inhabit reef crevices and contribute to maintaining ecological balance."
+    },
+    "reef shark": {
+        "indicator": "apex predator",
+        "importance": "high",
+        "description": "Reef sharks regulate prey populations and indicate a relatively healthy marine ecosystem."
+    },
+    "hammerhead shark": {
+        "indicator": "apex predator",
+        "importance": "high",
+        "description": "Hammerhead sharks are important top predators whose presence reflects ecosystem complexity."
+    },
+    "sea turtle": {
+        "indicator": "ecosystem health",
+        "importance": "high",
+        "description": "Sea turtles are protected species that contribute to healthy seagrass beds and coral reef ecosystems."
+    },
+    "loggerhead turtle": {
+        "indicator": "biodiversity",
+        "importance": "high",
+        "description": "Loggerhead turtles help regulate marine invertebrate populations and are internationally protected."
+    },
+    "stingray": {
+        "indicator": "benthic ecosystem",
+        "importance": "medium",
+        "description": "Stingrays forage on the seabed and help cycle nutrients within benthic habitats."
+    },
+    "manta ray": {
+        "indicator": "plankton abundance",
+        "importance": "high",
+        "description": "Manta rays are large filter feeders whose presence often indicates healthy plankton populations."
+    },
+    "octopus": {
+        "indicator": "intelligent invertebrate",
+        "importance": "medium",
+        "description": "Octopuses are highly intelligent predators that occupy important ecological niches."
+    },
+    "jellyfish": {
+        "indicator": "environmental change",
+        "importance": "low",
+        "description": "Large jellyfish blooms may indicate changing ocean conditions or ecosystem imbalance."
+    },
+    "dolphin": {
+        "indicator": "marine mammal",
+        "importance": "high",
+        "description": "Dolphins are apex predators and often indicate productive marine ecosystems."
+    },
+    "whale": {
+        "indicator": "marine mammal",
+        "importance": "high",
+        "description": "Whales play a vital role in nutrient cycling and contribute significantly to ocean ecosystem health."
+    },
+    "starfish": {
+        "indicator": "benthic biodiversity",
+        "importance": "medium",
+        "description": "Sea stars contribute to maintaining ecological balance within reef and benthic communities."
+    },
+    "sea urchin": {
+        "indicator": "algae grazing",
+        "importance": "medium",
+        "description": "Sea urchins help control algae, but population explosions may damage coral reefs."
+    },
+    "seahorse": {
+        "indicator": "habitat quality",
+        "importance": "medium",
+        "description": "Seahorses depend on healthy seagrass and coral habitats and are sensitive to habitat degradation."
+    }
+}
