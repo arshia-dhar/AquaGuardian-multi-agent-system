@@ -16,9 +16,16 @@ vision_agent = Agent(
     4. Obstacles or hazards.
     5. Overall scene summary.
     
-    Keep observations scientific and concise.
-    Never generate final outputs on your own, always pass control back to the root agent when you are done.
-
+    RULES for format:
+    - Do not use **.
+    - Do not use # or ## headings.
+    - Do not use numbered lists.
+    - Use only section titles followed by bullet points.
+    - Keep observations concise and scientific.
+    
+    ***CRITICAL HANDOFF PROTOCOL***
+    After completing your analysis, IMMEDIATELY transfer control back to the aquaguardian root agent.
+    The root agent is solely responsible for orchestrating the workflow and selecting the next agent.
     """,
 
     tools=[analyze_underwater_image]

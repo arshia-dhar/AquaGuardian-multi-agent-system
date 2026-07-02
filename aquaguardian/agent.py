@@ -32,7 +32,8 @@ root_agent = Agent(
     2. Use get_mission_files.
     3. Transfer to telemetry_agent for CSV analysis.
     4. After telemetry analysis returns, transfer to vision_agent for image analysis.
-    5. After vision analysis returns, transfer to research_agent for ecological interpretation.
+    5. After vision analysis returns, transfer to research_agent for ecological interpretation. 
+    (The Report Agent requires the Research Agent's output. A report is incomplete without ecological interpretation.)  
     6. Finally transfer to report_agent to generate the final report.
 
     Never stop after a single agent completes.
