@@ -324,7 +324,7 @@ Telemetry      Vision        Research
 ```
 
 <p align="center">
-<img src="screenshots/image-5.png" width="900">
+<img src="screenshots/image-5.jpg" width="900">
 </p>
 
 ---
