@@ -235,6 +235,7 @@ Install dependencies.
 ```bash
 pip install -r requirements.txt
 ```
+**Note:** AquaGuardian has been tested on Python 3.11. Some dependencies may break with Python 3.12+ due to removal of the distutils module.
 
 ---
 
@@ -323,7 +324,7 @@ Telemetry      Vision        Research
 ```
 
 <p align="center">
-<img src="screenshots/image-4.png" width="900">
+<img src="screenshots/image-5.png" width="900">
 </p>
 
 ---
