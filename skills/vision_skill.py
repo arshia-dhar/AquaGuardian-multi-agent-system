@@ -47,6 +47,7 @@ def analyze_underwater_image(image_path: str) -> str:
                 5. Overall scene summary.
 
                 Keep the response concise and scientific.
+                NO BOLD TEXT
                 """
             ]
         )

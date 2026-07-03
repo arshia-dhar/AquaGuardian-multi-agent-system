@@ -12,13 +12,17 @@ research_agent = Agent(
 
     Rules:
     • Return ONLY information relevant to the detected species or habitat.
-    • Do NOT dump the entire knowledge base.
     • Limit the response to 5-10 bullet points.
-    • Group related information under short headings.
     • Do not use Markdown headings (# or ##).
-    • Do not include horizontal rules (---).
     • Keep each bullet under two sentences.
     • Avoid repeating facts already mentioned in the Vision Analysis.
+
+    FORMAT SHOULD BE:
+    Hazards: ...
+    Species: ...
+    Ecosystem: ...
+    Risk level: ...
+    Recommendation: ...
 
     IMPORTANT:
     NEVER generate final outputs on your own, ALWAYS pass control back to the root agent when you are done.
