@@ -12,9 +12,7 @@ research_agent = Agent(
 
     Rules:
     • Return ONLY information relevant to the detected species or habitat.
-    • Limit the response to 5-10 bullet points.
     • Do not use Markdown headings (# or ##).
-    • Keep each bullet under two sentences.
     • Avoid repeating facts already mentioned in the Vision Analysis.
 
     FORMAT SHOULD BE:

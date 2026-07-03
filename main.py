@@ -6,12 +6,12 @@ from skills.report_skill import generate_mission_report
 
 # Analyze telemetry
 telemetry_summary = analyze_telemetry(
-    "missions/mission_2/sample_mission2.csv"
+    "missions/mission_1/sample_mission1.csv"
 )
 
 # Analyze image
 vision_summary = analyze_underwater_image(
-    "missions/mission_2/test2.jpg"
+    "missions/mission_1/test1.jpg"
 )
 
 # Generate ecological insights
@@ -21,7 +21,7 @@ research_summary = get_ecological_insights(
 
 # Generate final report
 report_path = generate_mission_report(
-    mission_name="Coral_Reef_Survey",
+    mission_name="coral_reef_mission_1",
     vision_summary=vision_summary,
     telemetry_summary=telemetry_summary,
     research_summary=research_summary
