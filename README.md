@@ -423,12 +423,6 @@ without changing the overall multi-agent architecture.
 
 ---
 
-# License
-
-MIT License
-
----
-
 # Acknowledgements
 
 Built using:
