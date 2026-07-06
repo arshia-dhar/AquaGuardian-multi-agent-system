@@ -207,6 +207,11 @@ Clone the repository.
 
 ```bash
 git clone https://github.com/arshia-dhar/AquaGuardian-multi-agent-system.git
+```
+
+You can rename the root folder to just AquaGuardian for convenience.
+
+```bash
 cd AquaGuardian
 ```
 
